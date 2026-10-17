@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for Homelab Backup, a private utility using the Google Drive API to store and verify the owner's server backups.">
+  <title>Privacy policy | Homelab Backup</title>
+  <link rel="canonical" href="https://backup.wildsurg.net/privacy.html">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="shell topbar"><a class="wordmark" href="./"><span class="mark" aria-hidden="true">HB</span><span>Homelab <strong>Backup</strong></span></a><nav aria-label="Primary navigation"><a href="./">Overview</a><a href="./privacy.html" aria-current="page">Privacy</a><a href="./terms.html">Terms</a></nav></div></header>
+  <main id="main" class="shell document">
+    <p class="section-kicker">Data practices</p>
+    <h1>Privacy policy</h1>
+    <p class="document-lead">How Homelab Backup accesses, uses and protects Google Drive data.</p>
+    <p class="updated"><strong>Last updated:</strong> 17 October 2026</p>
+
+    <section><h2>1. Who operates this utility?</h2><p>Homelab Backup is a personal, self-hosted server backup utility operated by the owner of the connected Google account. It is not a consumer-facing cloud storage service. Questions may be directed to the operator through <a href="https://github.com/ahmedyaser7">the operator's GitHub profile</a>.</p></section>
+
+    <section><h2>2. Google user data accessed</h2><p>The utility uses rclone and the Google Drive API, after explicit Google OAuth authorisation, to work with backup objects in a designated Drive folder. This can involve file names, identifiers, file contents and related metadata, including the data needed to upload, list, download, verify and delete those objects.</p><p>Google's OAuth consent screen describes the actual Drive permission scope requested. If a broad scope is granted, the token may technically be able to access files beyond the backup folder; ordinary backup scripts limit their operations to the configured destination.</p></section>
+
+    <section><h2>3. How Google data is used</h2><p>Google Drive access is used to upload full backup archives and checksum files, retrieve or read files to verify integrity, list backup locations when required, and delete this utility's expired scheduled backups according to the configured retention policy. No Google user data is used for personalised advertising, profiling, resale or unrelated analytics.</p></section>
+
+    <section><h2>4. Where data is stored</h2><p>Backup archives are saved locally on the privately administered server and copied into the owner's private Google Drive account. OAuth access and refresh tokens are stored in the server's protected rclone configuration, not on this public informational website. The website itself contains no login, upload form or backup viewer.</p><p>Backup archives may contain personal information, identifiable clinical/research records, activity history and password hashes from the applications being backed up. The current backup process does not apply an additional client-side encryption layer before uploading to Drive. The owner must protect access to both the Drive account and local storage.</p></section>
+
+    <section><h2>5. Sharing and transfer</h2><p>The utility transfers backup files and related metadata to Google Drive as instructed by the account owner. It does not sell or share Google account data with advertisers, data brokers or unrelated third parties. Files are accessible to parties to whom the account owner independently grants Drive access and to service providers as governed by Google's terms and privacy policy.</p></section>
+
+    <section><h2>6. Retention and deletion</h2><p>For the Zeus scheduled backup configuration, this utility retains its own local scheduled backups for approximately 30 days and its own corresponding Google Drive backups for approximately 90 days. These retention periods are configuration-specific, not general Google Drive retention limits. Earlier or manually uploaded backups may remain until the owner deletes them. The owner can delete backups in Google Drive and revoke authorisation at any time through Google Account security settings.</p></section>
+
+    <section><h2>7. Security</h2><p>Google OAuth grants access only after the account owner approves the requested scope. Backup automation operates from the private server. Access to the backup archives, server configuration and Google account should be restricted. The backup job validates archive integrity; validation does not replace confidentiality protections.</p></section>
+
+    <section><h2>8. This informational website</h2><p>This static site does not ask for Google credentials, access Drive data, set first-party tracking cookies or run advertising scripts. As with ordinary website hosting, the host may process technical request information under its own policies.</p></section>
+
+    <section><h2>9. Google API Services User Data Policy</h2><p>Use of information received through Google APIs is intended to follow the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. The operator can update this document when the backup workflow or access scope changes.</p></section>
+
+    <section><h2>10. Contact</h2><p>For questions, deletion requests or concerns, contact the operator through <a href="https://github.com/ahmedyaser7">GitHub</a>. Because this is a single-owner application, the connected Google account holder can also remove the app's access directly from their own Google Account.</p></section>
+    <div class="document-end"><a class="button secondary" href="./">← Back to homepage</a></div>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><p>© 2026 Homelab Backup · Private, owner-operated utility</p><nav aria-label="Footer navigation"><a href="./privacy.html">Privacy policy</a><a href="./terms.html">Terms</a><a href="https://github.com/ahmedyaser7" rel="noopener noreferrer">Contact the operator ↗</a></nav></div></footer>
+</body>
+</html>
